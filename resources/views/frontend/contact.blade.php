@@ -3,10 +3,10 @@
 	<section class="page-banner" style="background-image: url(/frontend/images/background/18.jpg)">
 		<div class="auto-container">
 			<ul class="page-breadbrumbs">
-				<li><a href="{{ route('index')}}">Home</a></li>
-				<li>Contact</li>
+				<li><a href="{{ route('index')}}">{{ __('main.home') }}</a></li>
+				<li>{{ __('main.contact') }}</li>
 			</ul>
-			<h1 class="page-banner_title">Contact</h1>
+			<h1 class="page-banner_title">{{ __('main.contact') }}</h1>
 		</div>
 	</section>
 	<!-- End Page Banner -->
@@ -31,24 +31,18 @@
                                 <div class="col-lg-6">
                                     <!-- Form Group -->
                                     <div class="form-group">
-                                        <label class="form-label">First Name</label>
-                                        <input type="text" name="f-name" placeholder="First Name" required>
+                                        <label class="form-label">Full Name</label>
+                                        <input type="text" id="full_name" name="full_name" placeholder="Full Name" required>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6">
-                                    <!-- Form Group -->
-                                    <div class="form-group">
-                                        <label class="form-label">Last Name</label>
-                                        <input type="text" name="l-name" placeholder="Last Name">
-                                    </div>
-                                </div>
+
 
                                 <div class="col-lg-6">
                                     <!-- Form Group -->
                                     <div class="form-group">
                                         <label class="form-label">Email Address</label>
-                                        <input type="email" name="email" placeholder="Email Address" required>
+                                        <input type="email" id="email" name="email" placeholder="Email Address" required>
                                     </div>
                                 </div>
 
@@ -56,7 +50,7 @@
                                     <!-- Form Group -->
                                     <div class="form-group">
                                         <label class="form-label">Phone Number</label>
-                                        <input type="number" name="phone" placeholder="Phone Number">
+                                        <input type="text" id="phone_number" name="phone_number" placeholder="Phone Number" value="+998">
                                     </div>
                                 </div>
 
@@ -64,12 +58,12 @@
                                     <!-- Form Group -->
                                     <div class="form-group">
                                         <label class="form-label">Enter Text</label>
-                                        <textarea name="text" placeholder="Enter Text"></textarea>
+                                        <textarea id="description" name="description" placeholder="Enter Text"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12">
-                                    <button type="submit" class="btn-style-two theme-btn">
+                                    <button type="submit" class="btn-style-two theme-btn" onclick="sendphone()">
                                         <span class="btn-wrap">
                                             <span class="text-one">Send Message</span>
                                             <span class="text-two">Send Message</span>
@@ -119,4 +113,53 @@
 		</div>
 	</section>
 	<!-- End CTA One -->
+
+
+    <script>
+        function sendphone() {
+            const phone_number = document.getElementById('phone_number').value;
+            const full_name = document.getElementById('full_name').value;
+            const email = document.getElementById('email').value;
+            const description = document.getElementById('description').value;
+
+            if (!full_name || !phone_number || !email) {
+                alert('Iltimos, tugmani bosishdan avval barcha maydonlarni to\'ldiring.');
+                return;
+            }
+
+            const message = `A contact form submission has been received:\n\nFull Name: ${full_name}\nPhone Number: ${phone_number}\nEmail: ${email}\nDescription: ${description}`;
+            const telegramBotToken = '7217681658:AAGzxilWkKBQqgxsA9Nte_T3viv4I7c2TkY'; // Bu yerga o'zingizning bot tokeningizni qo'ying
+            const telegramChatId = '6583641407'; // Bu yerga o'zingizning chat ID ni qo'ying
+
+            const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
+            const data = {
+                chat_id: telegramChatId,
+                text: message
+            };
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        alert('Xabar yuborildi!');
+                        document.getElementById('full_name').value = '';
+                        document.getElementById('phone_number').value = '';
+                        document.getElementById('email').value = '';
+                        document.getElementById('description').value = '';
+                    } else {
+                        alert('Xatolik yuz berdi. Iltimos, qaytadan urinib ko\'ring.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Xatolik:', error);
+                    alert('Xatolik yuz berdi. Iltimos, qaytadan urinib ko\'ring.');
+                });
+        }
+    </script>
 </x-layouts.frontend>

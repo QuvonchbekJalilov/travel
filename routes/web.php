@@ -8,6 +8,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\TeamController;
 use App\Models\About;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,7 @@ Route::get('/', [FrontendController::class, 'main'])->name('index');
 Route::get('tour', [FrontendController::class, 'tour'])->name('tour');
 Route::get('blog', [FrontendController::class, 'blog'])->name('blog');
 Route::get('contact', [FrontendController::class, 'contact'])->name('contact');
+Route::get('about', [FrontendController::class, 'about'])->name('about');
 Route::get('tour/{tour}', [FrontendController::class, 'singleTour'])->name('singleTour');
 Route::get('blog/{blog}', [FrontendController::class, 'singleBlog'])->name('singleBlog');
 //login qismi 
@@ -39,6 +41,7 @@ Route::middleware(['checkAdmin:admin', 'auth'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
         Route::resource('about', AboutController::class);
+        Route::resource('team', TeamController::class);
         Route::resource('news', NewsController::class);
         Route::resource('tour', TourController::class);
         Route::resource('review', ReviewController::class);
