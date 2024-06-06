@@ -1743,7 +1743,7 @@
 	margin-bottom: var(--margin-zero);
 }
 
-.subscribe-box .form-group input[type="email"]{
+.subscribe-box .form-group input[type="text"]{
     position: relative;
     line-height: 43px;
     display: block;

@@ -8,8 +8,8 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
 	<section class="page-banner_two" style="background-image: url(/frontend/images/background/13.jpg)">
 		<div class="auto-container">
 			<ul class="page-breadbrumbs">
-				<li><a href="#">Home</a></li>
-				<li>blog</li>
+				<li><a href="{{ route('index')}}">{{__('main.home')}}</a></li>
+				<li>{{__('main.blog')}}</li>
 			</ul>
 			<h2 class="page-banner_two-title">{{$blog['title_'.$lang]}}</h2>
 			<div class="page-banner_two-author">

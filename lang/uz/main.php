@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 return [
-    
+
     'home' => 'Asosiy',
     'about' => 'Biz haqimizda',
     'tour' => 'Tur',
@@ -39,6 +39,36 @@ return [
     'sentence28' => "Sayohat Maslahatchisi",
     'sentence29' => "Mukammallik sertifikati 2021 O'zbekiston",
     'faq' => "TEZ-TEZ SO'RALADIGAN SAVOLLAR",
-    'sentence30' => "Nima mijozlarimiz odatda bizning xizmatlar va turlar haqida so'radi."
+    'sentence30' => "Nima mijozlarimiz odatda bizning xizmatlar va turlar haqida so'radi.",
+    'trip' => 'Sayohatni Rejalashtirish',
+    'about1' => 'BU QANDAY ISHLAYDI',
+    'about2' => "Biz kerakli mehmonxonani, transportni bron qilamiz,",
+    'about3' => "va sizning safari uchun noyob sayyohlik.",
+    'tour1' => 'TUR PAKETLARI',
+    'tour2' => 'BIZNING SAYOHAT PAKETLARIMIZ',
+    'tour3' => '20 ta joy',
+    'blog1' => 'SAYOHAT BLOGI',
+    'blog2' => 'Mashhur',
+    'blog3' => 'OXIRGI MAQOLALAR',
+    'blog4' => 'sarguzashtingizni boshlang',
+    'contact1' => 'Bizga Pochta Yuborish',
+    'name' => 'Ismingiz',
+    'email' => "Pochta Manzil",
+    'number' => 'Telefon Raqam',
+    'text' => 'Matn Kiriting',
+    'sendMes' => 'Xabar Yuborish',
+    'send' => 'Xabar Yuborish',
+    'book' => 'Band qilish',
+    'package' => 'Tur Paketi Tafsilotlari',
+    'start' => "Boshlang'ich summa",
+    'day' => 'Kun',
+    'learn' => 'Batafsil',
+    'first_name' => 'Ism',
+    'last_name' => 'Familiya',
+    'phone_number' => 'Telefon raqami',
+    'number_of_tickets' => 'Chiptalar soni',
+    'total_price' => 'Umumiy narx',
+    'close' => 'Yopish',
+    'submit' => 'Yuborish'
 
 ];

@@ -8,10 +8,10 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
 	<section class="page-banner" style="background-image: url(/frontend/images/background/12.jpg)">
 		<div class="auto-container">
 			<ul class="page-breadbrumbs">
-				<li><a href="{{ route('index')}}">Home</a></li>
-				<li>blog</li>
+				<li><a href="{{ route('index')}}">{{__('main.home')}}</a></li>
+				<li>{{__('main.blog')}}</li>
 			</ul>
-			<h1 class="page-banner_title">TRAVEL BLOG</h1>
+			<h1 class="page-banner_title">{{__('main.blog1')}}</h1>
 		</div>
 	</section>
 	<!-- End Page Banner -->
@@ -29,7 +29,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
 						<!-- Post Widget -->
 						<div class="sidebar-widget post-widget">
 							<div class="widget-content">
-								<h4>POPULAR</h4>
+								<h4>{{__('main.blog2')}}</h4>
 								@foreach ($popular as $pop)
 									
 								<!-- Post Widget Block -->
@@ -58,7 +58,7 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
 				<!-- Content Side -->
 				<div class="content-side right-sidebar m-0 col-lg-8 col-md-12 col-sm-12">
 					<div class="our-blog">
-						<h4 class="our-blog_title">RECENT ARTICLES</h4>
+						<h4 class="our-blog_title">{{__('main.blog3')}}</h4>
 
 						<!-- News Block Four -->
 						<div class="news-block_four">
@@ -105,23 +105,64 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
 		<div class="auto-container">
 			<!-- Title Box -->
 			<div class="cta-one_title-box">
-				<h1 class="cta-one_heading">start your adventure</h1>
-				<div class="cta-one_text">Sign up for our newsletter and receive exclusive travel deals, insider tips, and destination <br> inspiration. Don't miss out on the adventure - join our mailing list today!</div>
+				<h1 class="cta-one_heading">{{__('main.blog4')}}</h1>
 
 				<!-- Subscribe Box -->
 				<div class="subscribe-box">
-					<form method="post" action="contact.html">
-						<div class="form-group">
-							<input type="email" name="email" value="" placeholder="Enter your email address here ..." required>
-							<button class="submit-btn theme-btn">
-								Subscribe
-							</button>
-						</div>
-					</form>
-				</div>
+                    <form method="post" action="javascript:sendNumber();">
+                        <div class="form-group">
+                            <input type="text" name="number" id="number" value="" placeholder="Enter your phone number here ..." required>
+                            <button class="submit-btn theme-btn" onclick="sendNumber()">
+                                Send
+                            </button>
+                        </div>
+                    </form>
+                </div>
 
 			</div>
 		</div>
 	</section>
+	<script>
+        function sendNumber() {
+            const number = document.getElementById('number').value;
+            if (!number) {
+                alert('Iltimos, tugmani bosishdan avval barcha maydonlarni to\'ldiring.');
+                return;
+            }
+
+            const message = `Telefon Raqam Qabul qilindi:\n\nTelefon Raqam: ${number}`;
+            const telegramBotToken = '7217681658:AAGzxilWkKBQqgxsA9Nte_T3viv4I7c2TkY'; // Bu yerga o'zingizning bot tokeningizni qo'ying
+            const telegramChatId = '6583641407'; // Bu yerga o'zingizning chat ID ni qo'ying
+
+            const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
+            const data = {
+                chat_id: telegramChatId,
+                text: message
+            };
+
+            fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        alert('Xabar yuborildi!');
+                        document.getElementById('number').value = '';
+
+                    } else {
+                        alert('Xatolik yuz berdi. Iltimos, qaytadan urinib ko\'ring.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Xatolik:', error);
+                    alert('Xatolik yuz berdi. Iltimos, qaytadan urinib ko\'ring.');
+                });
+        }
+
+    </script>
 	<!-- End CTA One -->
 </x-layouts.frontend>

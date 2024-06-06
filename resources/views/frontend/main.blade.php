@@ -44,17 +44,16 @@ use Illuminate\Support\Str;
             </div>
             <div class="row clearfix">
 
-                <!-- Destination Block One -->
-                <div class="destination-block_one col-lg-3 col-md-6 col-sm-12">
+                 <!-- Destination Block One -->
+                 <div class="destination-block_one col-lg-3 col-md-6 col-sm-12">
                     <div class="destination-block_one-inner">
                         <div class="destination-block_one-image">
                             <a href="{{route('singleTour', ['tour' => $secondTour->id])}}"><img src="/storage/{{$secondTour['image']}}" alt="" /></a>
-
                         </div>
                         <div class="destination-block_one-content">
                             <h3 class="destination-block_one-title"><a href="{{route('singleTour', ['tour' => $secondTour->id])}}">{{ $secondTour['title_'.$lang]}}</a></h3>
                             <div class="destination-block_one-title"><b>{{__('main.price')}}:</b> ${{$secondTour['price']}}</div>
-
+                            <a class="theme-btn book-btn"  href="{{route('singleTour', ['tour' => $secondTour->id])}}" data-toggle="modal" data-target="#bookingModal" data-tour-id="{{$secondTour->id}}">{{ __('main.learn') }}</a>
                         </div>
                     </div>
                 </div>
@@ -70,8 +69,7 @@ use Illuminate\Support\Str;
                                     <div class="destination-block_one-text"><b>{{__('main.price')}}:</b> ${{ $lastTour->price}}</div>
                                     <div class="destination-block_one-text">{{ Str::limit(strip_tags($lastTour['content_'.$lang]), 60, '...') }}</div>
                                     <div class="destination-block_one-btns">
-                                        <a href="{{route('singleTour', ['tour' => $lastTour->id])}}" class="theme-btn book-btn">Book Now</a>
-                                        <a href="{{route('singleTour', ['tour' => $lastTour->id])}}" class="theme-btn learn-btn">Learn More</a>
+                                        <a href="{{route('singleTour', ['tour' => $lastTour->id])}}" class="theme-btn learn-btn">{{__('main.learn')}}</a>
                                     </div>
                                 </div>
                             </div>
@@ -88,10 +86,10 @@ use Illuminate\Support\Str;
                         <div class="destination-block_one-content">
                             <h3 class="destination-block_one-title"><a href="{{route('singleTour', ['tour' => $thirdTour->id])}}">{{$thirdTour['title_'.$lang]}}</a></h3>
                             <div class="destination-block_one-title"><b>{{__('main.price')}}:</b> ${{ $thirdTour->price }}</div>
+                            <a class="theme-btn book-btn" href="{{route('singleTour', ['tour' => $thirdTour->id])}}" data-toggle="modal" data-target="#bookingModal" data-tour-id="{{$thirdTour->id}}">{{ __('main.learn') }}</a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -346,7 +344,7 @@ use Illuminate\Support\Str;
     </section>
     <!-- End Faq One -->
 
-  
 
-    
+
+
 </x-layouts.frontend>
