@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
+use App\Models\Blog;
 use App\Models\Faq;
 use App\Models\News;
 use App\Models\Review;
+use App\Models\Team;
 use App\Models\Tour;
 use Illuminate\Http\Request;
 
@@ -40,6 +43,23 @@ class FrontendController extends Controller
 
 
         return view('frontend.blog', compact('blog', 'blog1', 'popular'));
+    }
+    public function about()
+    {
+        $about = About::latest()->first();
+        $blog = Team::latest()->take(1)->get();
+        $blogs1 = Team::latest()->skip(1)->take(2)->get();
+        $blog2 = Team::latest()->skip(3)->take(1)->get();
+        $blog3 = Team::latest()->skip(4)->take(1)->get();
+        $blog4 = Team::latest()->skip(5)->take(1)->get();
+        return view('frontend.about', compact(
+            'about',
+            'blog',
+            'blogs1',
+            'blog2',
+            'blog3',
+            'blog4',
+        ));
     }
 
     public function contact()

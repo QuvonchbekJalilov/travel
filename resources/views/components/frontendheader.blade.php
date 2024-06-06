@@ -8,11 +8,14 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
             <div class="middle_bar_inner d-flex align-items-center justify-content-center justify-content-between gap-4 flex-wrap">
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="{{ route('index')}}" class="logo_default"><img src="/frontend/images/MiracleTourLogo.png" alt="img" style="height:50px"></a>
+                    <a href="{{ route('index')}}" class="logo_default"><img src="/frontend/images/MiracleTourLogo.png"
+                                                                            alt="img" style="height:50px"></a>
                 </div>
                 <div class="mainnav d-none d-lg-block">
                     <ul class="main_menu">
                         <li class="menu-item"><a href="{{ route('index')}}">{{__('main.home')}}</a>
+                        </li>
+                        <li class="menu-item"><a href="/about">{{__('main.about')}}</a>
                         </li>
                         <li class="menu-item"><a href="{{ route('tour')}}">{{__('main.tour')}}</a>
                         </li>
@@ -21,9 +24,15 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
                         <li class="menu-item"><a href="{{route('contact')}}">{{__('main.contact')}}</a>
                         </li>
                         <li class="menu-item menu-item-has-children"><a href="#">
-                                @if($lang == 'en') Language: en @endif
-                                @if($lang == 'ru') язык: ru @endif
-                                @if($lang == 'uz') Til: uz @endif
+                                @if($lang == 'en')
+                                    Language: en
+                                @endif
+                                @if($lang == 'ru')
+                                    язык: ru
+                                @endif
+                                @if($lang == 'uz')
+                                    Til: uz
+                                @endif
                             </a>
                             <ul class="sub-menu">
                                 <li><a class="dropdown-item" href="/ru">Руc</a></li>

@@ -3,6 +3,7 @@
 return [
     
     'home' => 'Asosiy',
+    'about' => 'Biz haqimizda',
     'tour' => 'Tur',
     'blog' => 'Blog',
     'contact' => 'Konatakt',
