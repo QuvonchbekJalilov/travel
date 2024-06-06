@@ -1,0 +1,43 @@
+<?php 
+
+return [
+    
+    'home' => 'Asosiy',
+    'tour' => 'Tur',
+    'blog' => 'Blog',
+    'contact' => 'Konatakt',
+    'sentence1' => 'UNUTILMAS SAYOHAT KUTMOQDA',
+    'sentence2' => 'Sarguzasht',
+    'sentence3' => "Bizning tajribali sayohat paketlarimiz bilan dunyoning eng qiziqarli joylarini kashf qilish hayajonini his eting.",
+    'sentence4' => "MASHHUR JOYLAR",
+    "sentence5" => "Sevimli mijozlarimizning fikrlaridan bizning eng yaxshi manzillarimizni o'rganing.",
+    'price' => 'Narxi',
+    'sentence6' => "Mijozlarning Zavqi",
+    'sentence7' => "Biz mijozimiz uchun eng yaxshi xizmat va tajribani taqdim etamiz.",
+    'sentence8' => "Haqiqiy Sarguzasht",
+    'sentence9' => "Biz aziz mijozimiz uchun haqiqiy sarguzasht tajribasini taqdim etamiz.",
+    'sentence10' => "Tajribali qo'llanmalar",
+    'sentence11' => "Bizning aziz mijoz uchun biz yetkazib faqat ekspert o'tgan sayrnomalari.",
+    'sentence12' => "Vaqt Moslashuvchanligi",
+    'sentence13' => "Biz aziz mijozimiz uchun sayohat qilish vaqtining moslashuvchanligini xush kelibsiz",
+    'sentence14' => "SIZ UCHUN FAQAT ENG YAXSHI SIFAT",
+    'sentence15' => "Siz unutilmas tajribalar uchun yakuniy eng yaxshi sifatini loyiq.",
+    'sentence16' => "Ishonchimiz uchun raqamlarimizga qarang. Keling, sarguzasht qilaylik!",
+    'sentence17' => "ko'p yillik tajriba",
+    'sentence18' => "belgilangan mamlakatlar",
+    'sentence19' => "tur & travel mukofotlari",
+    'sentence20' => "xursand mijozlar soni",
+    'testimonials' => 'Mijozlarimiz fikrlari',
+    'sentence21' => "Mijozlarimiz biz haqimizda nimani yaxshi ko'radilar.",
+    'sentence22' => "Yutuqlar",
+    'sentence23' => "Biz alohida sayohat xizmatlari uchun tan olinganmiz.",
+    'sentence24' => "Sayohat + Bo'sh Vaqt",
+    'sentence25' => "Dunyoning eng yaxshi turoperatori 2023 O'zbekiston",
+    'sentence26' => "Jahon Sayohati Mukofoti",
+    'sentence27' => "Eng Yaxshi Sayyohlik Agentligi 2022 O'zbekiston",
+    'sentence28' => "Sayohat Maslahatchisi",
+    'sentence29' => "Mukammallik sertifikati 2021 O'zbekiston",
+    'faq' => "TEZ-TEZ SO'RALADIGAN SAVOLLAR",
+    'sentence30' => "Nima mijozlarimiz odatda bizning xizmatlar va turlar haqida so'radi."
+
+];
