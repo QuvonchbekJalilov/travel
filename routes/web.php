@@ -29,6 +29,7 @@ Route::get('tour', [FrontendController::class, 'tour'])->name('tour');
 Route::get('blog', [FrontendController::class, 'blog'])->name('blog');
 Route::get('contact', [FrontendController::class, 'contact'])->name('contact');
 Route::get('tour/{tour}', [FrontendController::class, 'singleTour'])->name('singleTour');
+Route::get('blog/{blog}', [FrontendController::class, 'singleBlog'])->name('singleBlog');
 //login qismi 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/authenticate', [AuthController::class, 'authenticate'])->name('authenticate');

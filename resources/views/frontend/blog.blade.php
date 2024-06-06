@@ -35,11 +35,11 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
 								<!-- Post Widget Block -->
 								<div class="post-widget_block">
 									<div class="post-widget_block-image">
-										<a href="blog-details.html"><img src="/storage/{{$pop->image}}" alt="" /></a>
+										<a href="{{ route('singleBlog', ['blog' => $pop->id])}}"><img src="/storage/{{$pop->image}}" alt="" /></a>
 									</div>
 									<div class="content">
 										<div class="title">{{$pop['title_'.$lang]}}</div>
-										<h5 class="post-widget_heading"><a href="blog-details.html">{{Str::limit(strip_tags($pop['content_'.$lang]), 20, '...')}}</a></h5>
+										<h5 class="post-widget_heading"><a href="{{ route('singleBlog', ['blog' => $pop->id])}}">{{Str::limit(strip_tags($pop['content_'.$lang]), 20, '...')}}</a></h5>
 										<div class="post-widget_date">{{$pop->created_at->format('M D, Y')}}</div>
 									</div>
 								</div>
@@ -64,12 +64,12 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
 						<div class="news-block_four">
 							<div class="news-block_four-inner">
 								<div class="news-block_four-image">
-									<a href="blog-details.html"><img src="/storage/{{$blog->image}}" alt="" /></a>
+									<a href="{{ route('singleBlog', ['blog' => $blog->id])}}"><img src="/storage/{{$blog->image}}" alt="" /></a>
 								</div>
 								<div class="lower-content">
 									<p>{{$blog->created_at->format('M d , Y')}}</p>
 									<div class="title">{{$blog['title_'.$lang]}}</div>
-									<h4 class="news-block_four-heading"><a href="blog-details.html">{{ Str::limit(strip_tags($blog['content_'.$lang]), 30, '...') }}</a></h4>
+									<h4 class="news-block_four-heading"><a href="{{ route('singleBlog', ['blog' => $blog->id])}}">{{ Str::limit(strip_tags($blog['content_'.$lang]), 30, '...') }}</a></h4>
 
 								</div>
 							</div>
@@ -82,11 +82,11 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
 							<div class="news-block_four style-two col-lg-6 col-md-6 col-sm-12">
 								<div class="news-block_four-inner">
 									<div class="news-block_four-image">
-										<a href="blog-details.html"><img src="/storage/{{$b->image}}" alt="" /></a>
+										<a href="{{ route('singleBlog', ['blog' => $b->id])}}"><img src="/storage/{{$b->image}}" alt="" /></a>
 									</div>
 									<div class="lower-content">
 										<div class="title">{{$b['title_'.$lang]}}</div>
-										<h4 class="news-block_four-heading"><a href="blog-details.html">{{ Str::limit(strip_tags($b['content_'.$lang]), 20, '...') }}</a></h4>
+										<h4 class="news-block_four-heading"><a href="{{ route('singleBlog', ['blog' => $b->id])}}">{{ Str::limit(strip_tags($b['content_'.$lang]), 20, '...') }}</a></h4>
 									</div>
 								</div>
 							</div>

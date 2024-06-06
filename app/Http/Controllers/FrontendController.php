@@ -17,9 +17,9 @@ class FrontendController extends Controller
         $thirdTour = Tour::latest()->skip(2)->first();
 
         $reviews = Review::take(8)->get();
-
+        $tours = Tour::take(3);
         $faqs = Faq::all();
-        return view('frontend.main', compact('lastTour', 'secondTour', 'thirdTour', 'reviews', 'faqs'));
+        return view('frontend.main', compact('lastTour', 'secondTour', 'thirdTour', 'reviews','tours', 'faqs'));
     }
 
     public function tour()
@@ -28,7 +28,9 @@ class FrontendController extends Controller
         return view('frontend.tour', compact('tours'));
     }
     public function singleTour($tour){
+
         $tour = Tour::find($tour);
+
         return view('frontend.singleTour', compact('tour'));
     }
 
@@ -40,6 +42,13 @@ class FrontendController extends Controller
 
 
         return view('frontend.blog', compact('blog', 'blog1', 'popular'));
+    }
+
+    public function singleBlog($blog){
+        $blog = News::find($blog);
+        $popular = News::orderBy('id', 'asc')->take(4)->get();
+
+        return view('frontend.singleBlog', compact('blog', 'popular'));
     }
 
     public function contact()

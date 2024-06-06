@@ -254,7 +254,7 @@ use Illuminate\Support\Str;
 											<div class="gallery-block_two-location">20 Packages</div>
 											<div class="gallery-block_two-price">{{ $tour->price}} - {{ $tour->price + 500}}</div>
 										</div>
-										<div class="gallery-block_two-text-two">{{ strip_tags($tour['content_'.$lang])}}</div>
+										<div class="gallery-block_two-text-two">{{ Str::limit(strip_tags($tour['content_'.$lang]), 30 ,'...')}}</div>
 										<div class="gallery-block_two-button">
 											<a class="theme-btn learn-btn" href="{{ route('singleTour', ['tour' => $tour->id])}}">Learn More</a>
 										</div>
