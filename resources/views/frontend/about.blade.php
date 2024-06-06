@@ -17,13 +17,20 @@ $lang = \Illuminate\Support\Facades\App::getLocale();
     <!-- End Page Banner -->
 
     <!-- About Two -->
-    <section class="about-two">
-        <div class="auto-container">
-            <div class="about-two_icon flaticon-black-airplane"></div>
-            <div class="about-two_text">Vacasky Travel Agency is the perfect travel agency for your every memorable trips. With our expert guides, we are both professional and personal. Our trips are consisted of unforgettable experiences <br> and is delivered in a sustainable way to protect the environment.</div>
+<section class="">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-12 col-sm-12 px-3">
+                <img src="/storage/{{$about->image}}" style="border-radius:15px" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-8 col-md-12 col-sm-12">
+                <div class="about-two_text">{!! $about['content_'.$lang] !!}</div>
+            </div>
         </div>
-    </section>
-    <!-- End About Two -->
+    </div>
+</section>
+<!-- End About Two -->
+
 
 
     <!-- Feature One -->

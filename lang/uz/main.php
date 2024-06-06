@@ -6,7 +6,7 @@ return [
     'about' => 'Biz haqimizda',
     'tour' => 'Tur',
     'blog' => 'Blog',
-    'contact' => 'Konatakt',
+    'contact' => 'Kontakt',
     'sentence1' => 'UNUTILMAS SAYOHAT KUTMOQDA',
     'sentence2' => 'Sarguzasht',
     'sentence3' => "Bizning tajribali sayohat paketlarimiz bilan dunyoning eng qiziqarli joylarini kashf qilish hayajonini his eting.",

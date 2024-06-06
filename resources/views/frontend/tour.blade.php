@@ -62,11 +62,13 @@ use Illuminate\Support\Str;
 									<div class="widget">
 										<h6 class="widget-title">Custom Price Range</h6>
 										<div class="filter-price-range">
-											<div id="slider-range" class="price-filter-range ui-slider ui-corner-all ui-widget ui-widget-content ui-slider-horizontal" name="rangeInput"><div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 50%; left: 25%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 25%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 75%;"></span></div>
-										
+											<div id="slider-range" class="price-filter-range ui-slider ui-corner-all ui-widget ui-widget-content ui-slider-horizontal" name="rangeInput">
+												<div class="ui-slider-range ui-corner-all ui-widget-header" style="width: 50%; left: 25%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 25%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 75%;"></span>
+											</div>
+
 											<div class="value_field d-flex align-items-center justify-content-between mt-2">
-											<input type="number" min="10" max="2090" id="min_price" class="text-start bg-transparent" disabled="" readonly="">
-											<input type="number" min="15" max="2100" id="max_price" class="text-end bg-transparent" disabled="" readonly="">
+												<input type="number" min="10" max="2090" id="min_price" class="text-start bg-transparent" disabled="" readonly="">
+												<input type="number" min="15" max="2100" id="max_price" class="text-end bg-transparent" disabled="" readonly="">
 											</div>
 										</div>
 									</div>
@@ -75,29 +77,29 @@ use Illuminate\Support\Str;
 								<div class="col-lg-4 col-md-4">
 									<div class="widget">
 										<h6 class="widget-title">Style</h6>
-										<div class="filter-style"> 
-											
-												<div class="form-check">
-													<label for="checkbox1">Luxury</label>
-													<input type="checkbox" class="form-check-input" name="checkbox1" value="">
-													<span class="content_count">12</span>
-												</div>                                
-												<div class="form-check">
-													<label for="checkbox2">Suite</label>
-													<input type="checkbox" class="form-check-input" name="checkbox2" checked="" value="">
-													<span class="content_count">09</span>
-												</div>
-												<div class="form-check">
-													<label for="checkbox3">Mid-Range</label>
-													<input type="checkbox" class="form-check-input" name="checkbox3" value="">
-													<span class="content_count">18</span>
-												</div>
-												<div class="form-check">
-													<label for="checkbox4">Business</label>
-													<input type="checkbox" class="form-check-input" name="checkbox4" value="">
-													<span class="content_count">28</span>
-												</div>
-											
+										<div class="filter-style">
+
+											<div class="form-check">
+												<label for="checkbox1">Luxury</label>
+												<input type="checkbox" class="form-check-input" name="checkbox1" value="">
+												<span class="content_count">12</span>
+											</div>
+											<div class="form-check">
+												<label for="checkbox2">Suite</label>
+												<input type="checkbox" class="form-check-input" name="checkbox2" checked="" value="">
+												<span class="content_count">09</span>
+											</div>
+											<div class="form-check">
+												<label for="checkbox3">Mid-Range</label>
+												<input type="checkbox" class="form-check-input" name="checkbox3" value="">
+												<span class="content_count">18</span>
+											</div>
+											<div class="form-check">
+												<label for="checkbox4">Business</label>
+												<input type="checkbox" class="form-check-input" name="checkbox4" value="">
+												<span class="content_count">28</span>
+											</div>
+
 										</div>
 									</div>
 								</div>
@@ -105,13 +107,13 @@ use Illuminate\Support\Str;
 								<div class="col-lg-4 col-md-4">
 									<div class="widget">
 										<h6 class="widget-title">Category</h6>
-										<div class="filter-category"> 
+										<div class="filter-category">
 											<form action="" method="post">
 												<div class="form-check">
 													<label for="checkbox1">Motel</label>
 													<input type="checkbox" class="form-check-input" name="checkbox1" value="">
 													<span class="content_count">26</span>
-												</div>                                
+												</div>
 												<div class="form-check">
 													<label for="checkbox2">Resort</label>
 													<input type="checkbox" class="form-check-input" name="checkbox2" checked="" value="">
@@ -135,13 +137,13 @@ use Illuminate\Support\Str;
 								<div class="col-lg-4 col-md-4">
 									<div class="widget">
 										<h6 class="widget-title">Amenities</h6>
-										<div class="filter-amenities"> 
+										<div class="filter-amenities">
 											<form action="" method="post">
 												<div class="form-check">
 													<label for="checkbox1">Breakfast Included</label>
 													<input type="checkbox" class="form-check-input" name="checkbox1" value="">
 													<span class="content_count">26</span>
-												</div>                                
+												</div>
 												<div class="form-check">
 													<label for="checkbox2">Swiming Pool</label>
 													<input type="checkbox" class="form-check-input" name="checkbox2" checked="" value="">
@@ -165,13 +167,13 @@ use Illuminate\Support\Str;
 								<div class="col-lg-4 col-md-4">
 									<div class="widget">
 										<h6 class="widget-title">Star Type</h6>
-										<div class="filter-rating"> 
+										<div class="filter-rating">
 											<form action="" method="post">
 												<div class="row m-0">
 													<div class="form-check col-auto p-0 pe-1">
 														<input type="checkbox" class="btn-check" name="checkbox1" value="">
 														<label for="checkbox1" class="btn">5 <i class="fa fa-star"></i></label>
-													</div>                                
+													</div>
 													<div class="form-check col-auto p-0 pe-1">
 														<input type="checkbox" class="btn-check" name="checkbox2" value="">
 														<label for="checkbox2" class="btn">4 <i class="fa fa-star"></i></label>
@@ -197,13 +199,13 @@ use Illuminate\Support\Str;
 								<div class="col-lg-4 col-md-4">
 									<div class="widget">
 										<h6 class="widget-title">Guest Rating</h6>
-										<div class="filter-rating"> 
+										<div class="filter-rating">
 											<form action="" method="post">
 												<div class="row m-0">
 													<div class="form-check col-auto p-0 pe-1">
 														<input type="checkbox" class="btn-check" name="checkbox1" value="">
 														<label for="checkbox1" class="btn">4.5+ <i class="fa fa-star"></i></label>
-													</div>                                
+													</div>
 													<div class="form-check col-auto p-0 pe-1">
 														<input type="checkbox" class="btn-check" name="checkbox2" value="">
 														<label for="checkbox2" class="btn">4 <i class="fa fa-star"></i></label>
@@ -222,26 +224,20 @@ use Illuminate\Support\Str;
 									</div>
 								</div>
 
-								<div class="col-lg-4 col-md-4">
-									<button type="submit" class="btn-style-two theme-btn">
-										<span class="btn-wrap">
-											<span class="text-one">Search</span>
-											<span class="text-two">Search</span>
-										</span>
-									</button>
-								</div>
+
 							</div>
 						</div>
-					</div></form>
-				
+					</div>
+				</form>
+
 			</div>
 
 			<!-- MixitUp Galery -->
-            <div class="mixitup-gallery">
-                
-                <div class="filter-list row clearfix" id="MixItUpF66489">
+			<div class="mixitup-gallery">
+
+				<div class="filter-list row clearfix" id="MixItUpF66489">
 					@foreach ($tours as $tour )
-						
+
 					<!-- Gallery Block Two -->
 					<div class="gallery-block_two style-two all mix design cloud seasonal col-lg-4 col-md-6 col-sm-12" style="display: inline-block;">
 						<div class="gallery-block_two-inner">
@@ -277,8 +273,9 @@ use Illuminate\Support\Str;
 
 				</div>
 			</div>
+			{{ $tours->links()}}
 		</div>
 	</section>
 
 	<!-- Footer -->
-	</x-layouts.frontend>	
+</x-layouts.frontend>

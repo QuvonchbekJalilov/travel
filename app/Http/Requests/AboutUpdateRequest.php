@@ -28,7 +28,7 @@ class AboutUpdateRequest extends FormRequest
             'content_uz' => 'string|nullable',
             'content_ru' => 'string|nullable',
             'content_en' => 'string|nullable',
-            'image' => 'nullable|mimes:png,jpg,jpeg|size:4048'  
+            'image' => 'nullable|mimes:png,jpg,jpeg|max:4048'  
         ];
     }
 }

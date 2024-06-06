@@ -54,6 +54,7 @@ class FrontendController extends Controller
         $blog2 = Team::latest()->skip(3)->take(1)->get();
         $blog3 = Team::latest()->skip(4)->take(1)->get();
         $blog4 = Team::latest()->skip(5)->take(1)->get();
+        
         return view('frontend.about', compact(
             'about',
             'blog',
