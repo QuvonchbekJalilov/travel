@@ -70,7 +70,12 @@ return [
     'number_of_tickets' => 'Number of tickets',
     'total_price' => 'Total Price',
     'close' => 'Close',
-    'submit' => 'Submit'
+    'submit' => 'Submit',
+    'buy_now' => 'Buy Now',
+    'footer1' => 'Copyright',
+    'dora' => '2024 Dora Dev',
+    'footer2' => ". All rights reserved.",
+    'pay_now' => 'Pay Now',
 
 
 ];

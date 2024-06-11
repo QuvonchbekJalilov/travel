@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Log In | Dashtrap - Responsive Bootstrap 5 Admin Dashboard</title>
+    <title>Log In | Miracle Tour</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Myra Studio" name="author" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="/frontend/images/icon.png">
 
     <!-- App css -->
     <link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
@@ -25,12 +25,12 @@
                     <div class="card-body p-4">
 
                         <div class="text-center w-75 mx-auto auth-logo mb-4">
-                            <a href="index.html" class="logo-dark">
-                                <span><img src="assets/images/logo-dark.png" alt="" height="22"></span>
+                            <a href="{{ route('index')}}" class="logo-dark">
+                                <span><img src="/frontend/images/MiracleTourLogoBlack.png" alt="" height="35"></span>
                             </a>
 
                             <a href="index.html" class="logo-light">
-                                <span><img src="assets/images/logo-light.png" alt="" height="22"></span>
+                                <span><img src="/frontend/images/MiracleTourLogoBlack.png" alt="" height="35"></span>
                             </a>
                         </div>
                         @if (session('error'))

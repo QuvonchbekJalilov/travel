@@ -44,8 +44,8 @@ use Illuminate\Support\Str;
             </div>
             <div class="row clearfix">
 
-                 <!-- Destination Block One -->
-                 <div class="destination-block_one col-lg-3 col-md-6 col-sm-12">
+                <!-- Destination Block One -->
+                <div class="destination-block_one col-lg-3 col-md-6 col-sm-12">
                     <div class="destination-block_one-inner">
                         <div class="destination-block_one-image">
                             <a href="{{route('singleTour', ['tour' => $secondTour->id])}}"><img src="/storage/{{$secondTour['image']}}" alt="" /></a>
@@ -53,7 +53,7 @@ use Illuminate\Support\Str;
                         <div class="destination-block_one-content">
                             <h3 class="destination-block_one-title"><a href="{{route('singleTour', ['tour' => $secondTour->id])}}">{{ $secondTour['title_'.$lang]}}</a></h3>
                             <div class="destination-block_one-title"><b>{{__('main.price')}}:</b> ${{$secondTour['price']}}</div>
-                            <a class="theme-btn book-btn"  href="{{route('singleTour', ['tour' => $secondTour->id])}}" data-toggle="modal" data-target="#bookingModal" data-tour-id="{{$secondTour->id}}">{{ __('main.learn') }}</a>
+                            <a class="theme-btn book-btn" href="{{route('singleTour', ['tour' => $secondTour->id])}}" data-toggle="modal" data-target="#bookingModal" data-tour-id="{{$secondTour->id}}">{{ __('main.learn') }}</a>
                         </div>
                     </div>
                 </div>
@@ -141,7 +141,7 @@ use Illuminate\Support\Str;
     </section>
     <!-- End Feature One -->
 
-    
+
 
     <!-- Counter One -->
     <section class="counter-one">
@@ -324,7 +324,7 @@ use Illuminate\Support\Str;
                 <ul class="accordion-box">
 
                     @foreach ($faqs as $faq)
-                        
+
                     <!-- Block -->
                     <li class="accordion block">
                         <div class="acc-btn">
@@ -345,6 +345,71 @@ use Illuminate\Support\Str;
     <!-- End Faq One -->
 
 
+    <!-- CTA One -->
+    <section class="cta-one" style="background-image: url(/frontend/images/background/2.jpg)">
+        <div class="auto-container">
+            <!-- Title Box -->
+            <div class="cta-one_title-box">
+                <h1 class="cta-one_heading">{{__('main.blog4')}}</h1>
 
+                <!-- Subscribe Box -->
+                <div class="subscribe-box">
+                    <form method="post" action="javascript:sendNumber();">
+                        <div class="form-group">
+                            <input type="text" name="number" id="number" value="" placeholder="Enter your phone number here ..." required>
+                            <button class="submit-btn theme-btn" onclick="sendNumber()">
+                                {{__('main.send')}}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End CTA One -->
+    
+    <script>
+        function sendNumber() {
+            const number = document.getElementById('number').value;
+            if (!number) {
+                alert('Iltimos, tugmani bosishdan avval barcha maydonlarni to\'ldiring.');
+                return;
+            }
+
+            const message = `Telefon Raqam Qabul qilindi:\n\nTelefon Raqam: ${number}`;
+            const telegramBotToken = '7217681658:AAGzxilWkKBQqgxsA9Nte_T3viv4I7c2TkY'; // Bu yerga o'zingizning bot tokeningizni qo'ying
+            const telegramChatId = '6583641407'; // Bu yerga o'zingizning chat ID ni qo'ying
+
+            const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
+            const data = {
+                chat_id: telegramChatId,
+                text: message
+            };
+
+            fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        alert('Xabar yuborildi!');
+                        document.getElementById('number').value = '';
+
+                    } else {
+                        alert('Xatolik yuz berdi. Iltimos, qaytadan urinib ko\'ring.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Xatolik:', error);
+                    alert('Xatolik yuz berdi. Iltimos, qaytadan urinib ko\'ring.');
+                });
+        }
+
+    </script>
 
 </x-layouts.frontend>

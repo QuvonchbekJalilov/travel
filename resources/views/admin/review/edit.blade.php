@@ -42,11 +42,11 @@
 
                             <div class="mb-3">
                                 <label for="name" class="form-label">To'liq ism</label>
-                                <input type="text" class="form-control" id="name" name="name" value="{{ $review->name }}" required>
+                                <input type="text" class="form-control" id="name" name="name" value="{{ $review->full_name }}" required>
                             </div>
                             <div class="mb-3">
                                 <label for="name" class="form-label">Mijoz Qayerdan?</label>
-                                <input type="text" class="form-control" id="name" name="from_country" value="{{ $review->form_country }}" required>
+                                <input type="text" class="form-control" id="name" name="from_country" value="{{ $review->from_country }}" required>
                             </div>
 
                             <h2 class="mt-5">Mijozlar fikri batafsil</h2>

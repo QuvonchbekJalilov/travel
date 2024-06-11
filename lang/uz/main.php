@@ -69,6 +69,21 @@ return [
     'number_of_tickets' => 'Chiptalar soni',
     'total_price' => 'Umumiy narx',
     'close' => 'Yopish',
-    'submit' => 'Yuborish'
+    'submit' => 'Yuborish',
+    'buy_now' => 'hozir sotib qilish',
+    'footer1' =>
+    'Mualliflik huquqi',
+
+    'footer2' =>
+    ". Barcha huquqlar himoyalangan.",
+    'pay_now' => 'hozir sotib qilish',
+    'dora' => '2024 Dora Dev',
+
+
+
+
+
+
+
 
 ];
